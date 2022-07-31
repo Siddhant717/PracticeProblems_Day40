@@ -7,7 +7,6 @@ console.log("Single digit number is "+singledigitnumber);
 let dicenumber = Math.floor(Math.random() * 6)+1;  
 console.log("Random Dice Number is "+dicenumber);
 
-
 //3- Add two Random Dice Number and Print the Result
 let dicenumber1 = Math.floor(Math.random() * 6)+1;  
 let dicenumber2 = Math.floor(Math.random() * 6)+1;  
