@@ -1,161 +1,149 @@
-//1- Read a single digit number and write the number in word
-let number = Math.floor(Math.random()*10)%10;
-console.log("Number : "+ number);
+//1- Read a single digit number and write the number in word using Case
+let Num = Math.floor(Math.random()*10)%10;
+console.log("Number : "+ Num);
 
-if (number == 1) 
-{
-    console.log("One");
-} else if (number == 2) 
-{
-    console.log("Two");
-} else if (number == 3) 
-{
-    console.log("Three");
-} else if (number == 4) 
-{
-    console.log("Four");
-} else if (number == 5) 
-{
-    console.log("Five");
-} else if (number == 6) 
-{
-    console.log("Six");
-} else if (number == 7) 
-{
-    console.log("Seven");
-} else if (number == 8)
-{
-    console.log("Eight");
-} else if (number == 9)
-{
-    console.log("Nine");
-} else if (number == 0) 
-{
-    console.log("Zero");
-} else 
-{
-    console.log("Invalid number");
+switch(Num){
+    case 0:
+        console.log("Zero");
+        break;
+    case 1:
+        console.log("One");
+        break;
+    case 2:
+        console.log("Two");
+        break;
+    case 3:
+        console.log("Three");
+        break;
+    case 4:
+        console.log("Four");
+        break;
+    case 5:
+        console.log("Five");
+        break;
+    case 6:
+        console.log("Six");
+        break;
+    case 7:
+        console.log("Seven");
+        break;
+    case 8:
+        console.log("Eight");
+        break;
+    case 9:
+        console.log("Nine");
+        break;
+    default:
+        console.log("Invalid number");
+        break;
 }
 
-
-//2 Read a Number and Display the week day
-let num = Math.floor(Math.random()*8);
-console.log("Number : "+num);
-if (num == 1) {
-    console.log("Day-Its Monday");
-} else if (num == 2) {
-    console.log("Day-Its Tuesday");
-} else if (num == 3) {
-    console.log("Day-Its Wednesday");
-} else if (num == 4) {
-    console.log("Day-Its Thursday");
-} else if (num == 5) {
-    console.log("Day-Its Friday");
-} else if (num == 6) {
-    console.log("Day-Its Saturday");
-} else if (num == 7) {
-    console.log("Day-Its Sunday");
-} else {
-    console.log("You can't take a number as zero.");
+//2-Read a Number and Display the week day (Sunday, Monday,...)
+let DayNumber = Math.floor(Math.random()*7) + 1;
+console.log("Number : "+DayNumber);
+switch(DayNumber){
+    case 1:
+        console.log("Sunday");
+        break;
+    case 2:
+        console.log("Monday");
+        break;
+    case 3:
+        console.log("Tuesday");
+        break;
+    case 4:
+        console.log("Wednesday");
+        break;
+    case 5:
+        console.log("Thursday");
+        break;
+    case 6:
+        console.log("Friday");
+        break;
+    case 7:
+        console.log("Saturday");
+        break;
+    default:
+        console.log("Invalid number");
+        break;
 }
 
-//3-Read a Number 1, 10, 100, 1000, etc and display unit, ten, hundred,...
-let power = Math.floor(Math.random()*10)%10;
-let numb = 10**power;
-console.log("Number : "+numb);
-
-if (numb == 1) 
-{
-    console.log("One");
-}
-else if (numb == 10)
-{
-    console.log("Ten");
-} 
-else if (numb == 100)
-{
-    console.log("Hundred");
-} 
-else if (numb == 1000) 
-{
-    console.log("Thousand");
-} 
-else if (numb == 10000) 
-{
-    console.log("Ten thousand");
-}
- else if (numb == 100000)
-{
-    console.log("One Lakh");
-
-} 
-else if (numb == 1000000)
-{
-    console.log("Ten Lakh");
-}
-else if (numb == 10000000)
-{
-    console.log("Ten million");
-
-}
-else if (numb == 100000000 )
-{
-    console.log("One hundred million");
-
-
-}
-else if (numb == 1000000000 )
-{
-    console.log("One billion");
-
+//3- Read a Number 1, 10, 100, 1000, etc and display unit, ten, hundred,...
+let power = Math.floor(Math.random()*10)%7;
+let Numb = 10**power;
+console.log("Number : "+Numb);
+switch(Numb){
+    case 1:
+        console.log("One");
+        break;
+    case 10:
+        console.log("Ten");
+        break;
+    case 100:
+        console.log("Hundred");
+        break;
+    case 1000:
+        console.log("Thousand");
+        break;
+    case 10000:
+        console.log("Ten thousand");
+        break;
+    case 100000:
+        console.log("One Lakh");
+        break;
+    case 1000000:
+        console.log("Ten Lakh");
+        break;
+    default:
+        console.log("Not in Range");
+        break;
 }
 
-//4- Arithmetic Operation (Find max and min number)
-let a= 50;
-let b= 40;
-let c= 80;
-
-let result1= a + b * c
-let result2 = a % b + c
-let result3 = c + a / b
-let result4= a * b + c
-
-console.log("Result1 " + result1);
-console.log("Result2 " + result2);
-console.log("Result3 " + result3);
-console.log("Result4 " + result4);
+//4 UnitConversion
+console.log(" enter 1 for Feet to Inch");
+console.log(" enter 2 for Feet to Meter");
+console.log(" enter 3 for Inch to Feet");
+console.log(" enter 4 for Meter to Feet");
 
 
-if(result1>result2 && result1>result3 && result1>result4)
-{
-    console.log("The Max number is :" + result1)
-} 
-else if(result1<result2 && result1<result3 && result1<result4)
-{
-    console.log("The Min number is :" + result1)
-}
+var readlineSync = require('readline-sync');
 
-if(result2>result1 && result2>result3 && result2>result4)
+var input = parseInt(readlineSync.question("Enter the number :")) 
+
+switch(input)
 {
-    console.log("The Max number is :" + result2)
-} 
-else if(result2<result1 && result2<result3 && result2<result3)
-{
-    console.log("The Min number is :" + result2)
-}
-if(result3>result1 && result3>result2 && result3>result4)
-{
-    console.log("The Max number is :" + result3)
-} 
-else if(result3<result1 && result3<result2 && result3<result4)
-{
-    console.log("The Min number is :" + result3)
-}
-if(result4>result1 && result4>result2 && result4>result3)
-{
-    console.log("The Max number is :" + result4)
-} 
-else if(result4<result1 && result4<result2 && result4<result3)
-{
-    console.log("The Min number is :" + result4)
+case 1:
+  var readlineSync = require('readline-sync');
+//convert ft to inch
+var input1 = parseInt(readlineSync.question("Enter No in Feet :"))
+let result = 12*input1;
+console.log(input1 +"ft =" +result+"inch");
+break;
+
+//convert ft to m
+case 2:
+var readlineSync = require('readline-sync');
+var input2 = parseInt(readlineSync.question("Enter Number in Feet :"));
+let result1 = 0.3048*input2;
+console.log(input2 +"ft =" +result1+"meter");
+break;
+
+//convert inch to ft
+case 3:
+var readlineSync = require('readline-sync');
+var input3 = parseInt(readlineSync.question("Enter Number in inch :"));
+let result2 = 0.0833*input3;
+console.log(input3 +"inch =" +result2+"ft");
+break;
+
+//convert m to ft
+case 4:
+var readlineSync = require('readline-sync');
+var input4 = parseInt(readlineSync.question("Enter Number in meter :"));
+let result3 = 3.2808*input4;
+console.log(input4 +"meter =" +result3+"ft");
+break;
+default :
+console.log("Enter a valid number");
+break;
 }
