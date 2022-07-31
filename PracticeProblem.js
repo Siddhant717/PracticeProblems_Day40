@@ -1,115 +1,161 @@
-//1- Generate 5 digit random numbers then output the min and max value
-let num1 = Math.floor(Math.random()*900)+100;
-let num2 = Math.floor(Math.random()*900)+100;
-let num3 = Math.floor(Math.random()*900)+100;
-let num4 = Math.floor(Math.random()*900)+100;
-let num5 = Math.floor(Math.random()*900)+100;
-console.log("Three digit random numbers are "+ num1,num2,num3,num4,num5);
+//1- Read a single digit number and write the number in word
+let number = Math.floor(Math.random()*10)%10;
+console.log("Number : "+ number);
 
-//For finding Max Number
-if(num1>num2 && num1>num3 && num1>num4 && num1>num5)
+if (number == 1) 
 {
-    console.log(num1 + " is maximum number");
-}
-if(num2>num1 && num2>num3 && num2>num4 && num2>num5)
+    console.log("One");
+} else if (number == 2) 
 {
-    console.log(num2 + " is maximum number");
-}
-if(num3>num1 && num3>num2 && num3>num4 && num3>num5)
+    console.log("Two");
+} else if (number == 3) 
 {
-    console.log(num3 + " is maximum number");
-}
-if(num4>num1 && num4>num2 && num4>num3 && num4>num5)
+    console.log("Three");
+} else if (number == 4) 
 {
-    console.log(num4 + " is maximum number");
-}
-if(num5>num2 && num5>num3 && num5>num4 && num5>num1)
+    console.log("Four");
+} else if (number == 5) 
 {
-    console.log(num5 + " is maximum number");
-}
-//For finding Min Number
-if(num1<num2 && num1<num3 && num1<num4 && num1<num5)
+    console.log("Five");
+} else if (number == 6) 
 {
-    console.log(num1 + " is minimum number");
-}
-if(num2<num1 && num2<num3 && num2<num4 && num2<num5)
+    console.log("Six");
+} else if (number == 7) 
 {
-    console.log(num2 + " is minimum number");
-}
-if(num3<num1 && num3<num2 && num3<num4 && num3<num5)
+    console.log("Seven");
+} else if (number == 8)
 {
-    console.log(num3 + " is minimum number");
-}
-if(num4<num1 && num4<num2 && num4<num3 && num4<num5)
+    console.log("Eight");
+} else if (number == 9)
 {
-    console.log(num4 + " is minimum number");
-}
-if(num5<num2 && num5<num3 && num5<num4 && num5<num1)
+    console.log("Nine");
+} else if (number == 0) 
 {
-    console.log(num5 + " is minimum number");
+    console.log("Zero");
+} else 
+{
+    console.log("Invalid number");
 }
 
 
-//2-Check whether the generated Day & Month falls between  given Day & Month or not
-console.log("Check day of month is between March 20 and June 20");
-
-let day=(Math.floor(Math.random() * 10)%31)+1;
-let month=(Math.floor(Math.random() * 10)%6)+1;
-
-console.log("Day : "+day+" & Month : "+month);
-if ( day> 20 && day< 31 && month == 3 )
-{
-    console.log("Input date is within range.");
-}
-else if ( day> 1 && day< 30 && month == 4 )
-{
-    console.log("Input date is within range.");
-}
-else if ( day> 1 && day< 31 && month == 5 )
-{
-    console.log("Input date is within range.");
-}
-else if ( day> 1 && day< 20 && month == 6 )
-{
-    console.log("Input date is within range.");
-}
-else
-{
-    console.log("False");
+//2 Read a Number and Display the week day
+let num = Math.floor(Math.random()*8);
+console.log("Number : "+num);
+if (num == 1) {
+    console.log("Day-Its Monday");
+} else if (num == 2) {
+    console.log("Day-Its Tuesday");
+} else if (num == 3) {
+    console.log("Day-Its Wednesday");
+} else if (num == 4) {
+    console.log("Day-Its Thursday");
+} else if (num == 5) {
+    console.log("Day-Its Friday");
+} else if (num == 6) {
+    console.log("Day-Its Saturday");
+} else if (num == 7) {
+    console.log("Day-Its Sunday");
+} else {
+    console.log("You can't take a number as zero.");
 }
 
-//3-Check Whether the input year is a leap year or not..
-var readlineSync = require('readline-sync');
+//3-Read a Number 1, 10, 100, 1000, etc and display unit, ten, hundred,...
+let power = Math.floor(Math.random()*10)%10;
+let numb = 10**power;
+console.log("Number : "+numb);
 
-var year = readlineSync.question("Enter the year :")
-
-if (year % 400 == 0)
+if (numb == 1) 
 {
-    console.log("It is a leap year");
+    console.log("One");
+}
+else if (numb == 10)
+{
+    console.log("Ten");
+} 
+else if (numb == 100)
+{
+    console.log("Hundred");
+} 
+else if (numb == 1000) 
+{
+    console.log("Thousand");
+} 
+else if (numb == 10000) 
+{
+    console.log("Ten thousand");
+}
+ else if (numb == 100000)
+{
+    console.log("One Lakh");
+
+} 
+else if (numb == 1000000)
+{
+    console.log("Ten Lakh");
+}
+else if (numb == 10000000)
+{
+    console.log("Ten million");
 
 }
-else if (year % 100 == 0)
+else if (numb == 100000000 )
 {
-    console.log(" It is not a leap year");
-}
-else if (year % 4 == 0)
-{
-    console.log("It is a leap year");
-}
-else
-{
-    console.log("It is not a leap year");
-}
+    console.log("One hundred million");
 
 
-//4- Program to simulate a coin flip and print out Head or Tail
-
-let tail = Math.floor(Math.random()*10) % 2;
-if(tail == 0)
-{
-    console.log("Tail");
 }
-else
+else if (numb == 1000000000 )
 {
-    console.log("Head");
+    console.log("One billion");
+
+}
+
+//4- Arithmetic Operation (Find max and min number)
+let a= 50;
+let b= 40;
+let c= 80;
+
+let result1= a + b * c
+let result2 = a % b + c
+let result3 = c + a / b
+let result4= a * b + c
+
+console.log("Result1 " + result1);
+console.log("Result2 " + result2);
+console.log("Result3 " + result3);
+console.log("Result4 " + result4);
+
+
+if(result1>result2 && result1>result3 && result1>result4)
+{
+    console.log("The Max number is :" + result1)
+} 
+else if(result1<result2 && result1<result3 && result1<result4)
+{
+    console.log("The Min number is :" + result1)
+}
+
+if(result2>result1 && result2>result3 && result2>result4)
+{
+    console.log("The Max number is :" + result2)
+} 
+else if(result2<result1 && result2<result3 && result2<result3)
+{
+    console.log("The Min number is :" + result2)
+}
+if(result3>result1 && result3>result2 && result3>result4)
+{
+    console.log("The Max number is :" + result3)
+} 
+else if(result3<result1 && result3<result2 && result3<result4)
+{
+    console.log("The Min number is :" + result3)
+}
+if(result4>result1 && result4>result2 && result4>result3)
+{
+    console.log("The Max number is :" + result4)
+} 
+else if(result4<result1 && result4<result2 && result4<result3)
+{
+    console.log("The Min number is :" + result4)
 }
