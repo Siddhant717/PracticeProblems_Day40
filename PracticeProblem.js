@@ -1,41 +1,43 @@
-//3-FlipCoin
-let FlipCoin=1;
-while(FlipCoin<12)
-{
-    let n= Math.floor(Math.random()*10)%2;
-    if(n==1)
-    {
-        console.log("Head");
-    }
-    else
-    {
-        console.log("Tail");
-    }
-    FlipCoin++;
+//1- Temperature Conversion
+var readlineSync = require('readline-sync');
+function Tofahrenheit (){
+    var degC = readlineSync.question("Please enter Temperature in Celcius");
+    let degF = (degC * 9/5) +32;
+    console.log(degF);
+    
 }
 
-//4-Find Magic Number
-var readlineSync = require('readline-sync');
-var n = readlineSync.question("Enter number between 1 to 100 ");
+Tofahrenheit()
 
-function FindMagicNumber(n){
-  let r,s;
-    while(n>9)
-    {
-        while(n>0){
-            r=n%10;
-            s=s+r;
-            n=n/10;
-           
-        }
-        n=s;
-        s=0;
+
+function ToCelcius (){
+    var degF = readlineSync.question("Please enter Temperature in Fahrenheit");
+    let degC = (degF - 32) * 5/9;
+    console.log(degC);
+    
+}
+
+ToCelcius()
+
+//2-
+function palindrom(){
+    var num=readlineSync.question("Please enter a number to check palindrom or not");
+    var temp=num;
+    var rev=0;
+    var div=0;
+    while(num>0){
+        div=num%10;
+        rev=(rev*10)+div;
+        num=parseInt(num/10);
     }
-    if(n==1){
-        console.log("Its a magic number")
+    if(temp==rev){
+        console.log("Entered number is palindrom number ");
     }
     else{
-        console.log("Its not a magic number")
+        console.log("Enter number is not a palindrom number ");
     }
+
 }
-FindMagicNumber(n);
+
+palindrom();
+
